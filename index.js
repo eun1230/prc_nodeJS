@@ -1,6 +1,10 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
 const port = 3000;
+
+app.use(cors()); // cors 가 있어야 front에서 요청에 응답이 가능!!!! 없으면 cors에러난다.
+
 
 app.get('/', function (req, res) {
   //http메소드, 라우팅, 콜백함수
